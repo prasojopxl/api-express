@@ -8,6 +8,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use(fileUpload())
+app.use(express.static("public"))
 app.use(productRoute)
 
 app.listen(5001,()=> console.log("Server Up and  Running..."))
